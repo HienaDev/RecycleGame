@@ -22,5 +22,10 @@ public class playerProgress : MonoBehaviour
     {
         GameManager.SendMessage("collectPaper");
     }
+
+    public void collectBottle()
+    {
+        GameManager.SendMessage("collectBottle");
+    }
 }
 
