@@ -16,16 +16,8 @@ public class DragAndDrop : MonoBehaviour
     private bool dragging;
     private Collider2D collider;
 
-    /// <summary>
-    /// Start is called before the first frame update
-    /// </summary>
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Convert mouse position to mouse position based on the camera
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
