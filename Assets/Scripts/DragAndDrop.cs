@@ -25,7 +25,7 @@ public class DragAndDrop : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Convert mouse position to mouse position based on the camera
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
