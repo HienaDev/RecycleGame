@@ -5,7 +5,13 @@ using UnityEngine;
 public class playerProgress : MonoBehaviour
 {
 
-    public int cansCollected = 0;
+    [SerializeField] private int cansCollected = 0;
+
+    [SerializeField] private int boardsCollected = 0;
+
+    [SerializeField] private int paperCollected = 0;
+
+
 
 
 
@@ -28,4 +34,17 @@ public class playerProgress : MonoBehaviour
         cansCollected++;
         Debug.Log(cansCollected);
     }
+
+    public void collectBoards()
+    {
+        boardsCollected++;
+        Debug.Log(boardsCollected);
+    }
+
+    public void collectPaper()
+    {
+        paperCollected++;
+        Debug.Log(paperCollected);
+    }
 }
+

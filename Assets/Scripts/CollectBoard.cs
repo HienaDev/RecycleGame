@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class collectCan : MonoBehaviour
+public class CollectBoard : MonoBehaviour
 {
 
     [SerializeField] private LayerMask playerMask;
 
-    [SerializeField] private float canCheckRadius = 2f;
+    [SerializeField] private float boardCheckRadius = 2f;
 
     void Start()
     {
-        
+
     }
 
 
@@ -24,11 +24,11 @@ public class collectCan : MonoBehaviour
 
     private void DetectCollision()
     {
-        Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, canCheckRadius, playerMask);
+        Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, boardCheckRadius, playerMask);
 
         if (collider != null)
         {
-            collider.SendMessage("collectCans");
+            collider.SendMessage("collectBoards");
             Destroy(gameObject);
         }
 
@@ -37,6 +37,6 @@ public class collectCan : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(gameObject.transform.position, canCheckRadius);
+        Gizmos.DrawWireSphere(gameObject.transform.position, boardCheckRadius);
     }
 }
