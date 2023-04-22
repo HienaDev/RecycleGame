@@ -21,6 +21,8 @@ public class playerProgress : MonoBehaviour
         
     }
 
+
+
     public void collectCans()
     {
         cansCollected++;
