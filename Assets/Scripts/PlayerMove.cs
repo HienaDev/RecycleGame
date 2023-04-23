@@ -137,4 +137,5 @@ public class PlayerMove : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position - transform.right * groundCheckSeparation, groundCheckRadius);
         }
     }
+
 }

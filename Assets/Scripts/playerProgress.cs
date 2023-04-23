@@ -8,24 +8,49 @@ public class playerProgress : MonoBehaviour
     [SerializeField]
     private GameObject GameManager;
 
+    [SerializeField] private bool isHolding = false;
+
     public void collectCans()
     {
-        GameManager.SendMessage("collectCans");
+        if (isHolding == false)
+        {
+            isHolding = true;
+            GameManager.SendMessage("collectCans");
+        }
     }
 
     public void collectBoards()
     {
-        GameManager.SendMessage("collectBoards");
+        if (isHolding == false)
+        {
+            isHolding = true;
+            GameManager.SendMessage("collectBoards");
+        }
     }
 
     public void collectPaper()
     {
-        GameManager.SendMessage("collectPaper");
+        if (isHolding == false)
+        {
+            isHolding = true;
+            GameManager.SendMessage("collectPaper");
+        }
     }
 
     public void collectBottle()
     {
-        GameManager.SendMessage("collectBottle");
+        if (isHolding == false)
+        {
+            isHolding = true;
+            GameManager.SendMessage("collectBottle");
+        }
     }
+
+    public void stopHolding()
+    {
+        isHolding = false;
+    }
+
+    public bool getHolding() => isHolding;
 }
 

@@ -10,6 +10,8 @@ public class collectCan : MonoBehaviour
 
     [SerializeField] private float canCheckRadius = 2f;
 
+    private bool isHeld = false;
+
     void Start()
     {
         
@@ -26,10 +28,9 @@ public class collectCan : MonoBehaviour
     {
         Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, canCheckRadius, playerMask);
 
-        if (collider != null)
+        if (collider != null && collider.gameObject.GetComponent<playerProgress>().getHolding())
         {
             collider.SendMessage("collectCans");
-            Destroy(gameObject);
         }
 
     }
