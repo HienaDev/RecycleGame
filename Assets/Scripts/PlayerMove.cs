@@ -37,7 +37,7 @@ public class PlayerMove : MonoBehaviour
 
 
 
-    //private Animator animator;
+    private Animator animator;
 
     private bool grounded;
 
@@ -45,7 +45,7 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -83,7 +83,7 @@ public class PlayerMove : MonoBehaviour
         //transform.position = CurrentPosition;
         rb.velocity = currentVelocity;
 
-        //animator.SetFloat("AbsVelocityX", Mathf.Abs(currentVelocity.x));
+        animator.SetFloat("AbsoluteSpeedX", Mathf.Abs(currentVelocity.x));
 
         //animator.SetFloat("VelocityY", currentVelocity.y);
 
@@ -94,14 +94,14 @@ public class PlayerMove : MonoBehaviour
         else if (currentVelocity.x > 0 && transform.right.x < 0)
             transform.rotation = Quaternion.identity;
 
-        if (grounded)
-        {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-        }
-        else
-        {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-        }
+        //if (grounded)
+        //{
+        //    gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+        //}
+        //else
+        //{
+        //    gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        //}
     }
 
     private void DetectGround()
