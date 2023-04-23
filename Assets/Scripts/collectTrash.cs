@@ -16,6 +16,9 @@ public class collectTrash : MonoBehaviour
 
     private float holdingReach;
 
+    [SerializeField] private AudioSource audioS;
+    [SerializeField] private AudioSource audioClip;
+
     private void Awake()
     {
         holdingReach = canCheckRadius;
@@ -48,7 +51,13 @@ public class collectTrash : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+
+
+
             isHeld = false;
+
+            audioS = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<AudioSource>();
+            audioS.PlayOneShot(audioS.clip);
 
             if (transform.rotation == Quaternion.Euler(0f, 180f, 0f))
             {
@@ -92,6 +101,7 @@ public class collectTrash : MonoBehaviour
         }
         else if (collider != null)
         {
+            
             collider.SendMessage("stopHolding");
         }
 
