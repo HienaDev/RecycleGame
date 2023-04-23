@@ -31,10 +31,6 @@ public class Trash : MonoBehaviour
                     GameObject.Find("SceneManager").GetComponent<trashSpawner>().SpawnTrash();
                     Destroy(gameObject);
                 }
-                else
-                {
-                    gameObject.transform.position = new Vector3(-150,70,0);
-                }
             }
         }
     }
