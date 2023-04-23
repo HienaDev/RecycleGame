@@ -8,14 +8,11 @@ public class Trash : MonoBehaviour
     private LayerMask binMask;
     [SerializeField]
     private string colour;
+
     private Vector3 objectPos;
     private Collider2D collider;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Dictionary<int, GameObject> trashObjects;
 
     // Update is called once per frame
     void Update()
@@ -31,11 +28,12 @@ public class Trash : MonoBehaviour
             {
                 if (collider.gameObject.GetComponent<Bin>().GetColour() == colour)
                 {
-                    Debug.Log("Success");
+                    GameObject.Find("SceneManager").GetComponent<trashSpawner>().SpawnTrash();
+                    Destroy(gameObject);
                 }
                 else
                 {
-                    Debug.Log("Fail");
+                    gameObject.transform.position = new Vector3(-150,70,0);
                 }
             }
         }
