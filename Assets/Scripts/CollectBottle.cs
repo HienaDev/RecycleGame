@@ -8,6 +8,8 @@ public class CollectBottle : MonoBehaviour
 
     [SerializeField] private float bottleCheckRadius = 2f;
 
+    private bool isHeld = false;
+
     void Start()
     {
 

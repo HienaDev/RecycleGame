@@ -10,6 +10,8 @@ public class CollectBoard : MonoBehaviour
 
     [SerializeField] private float boardCheckRadius = 2f;
 
+    private bool isHeld = false;
+
     void Start()
     {
 

@@ -9,6 +9,8 @@ public class CollectPaper : MonoBehaviour
 
     [SerializeField] private float paperCheckRadius = 2f;
 
+    private bool isHeld = false;
+
     void Start()
     {
 

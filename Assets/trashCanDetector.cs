@@ -1,38 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class collectCan : MonoBehaviour
+public class trashCanDetector : MonoBehaviour
 {
-
-    [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask trashMask;
 
     [SerializeField] private float canCheckRadius = 2f;
 
-    private bool isHeld = false;
-
-    void Start()
-    {
-        
-    }
 
 
     // Update is called once per frame
     private void Update()
     {
+
+
+
         DetectCollision();
+
+
     }
+
+
 
     private void DetectCollision()
     {
-        Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, canCheckRadius, playerMask);
+        Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, canCheckRadius, trashMask);
 
-        if (collider != null && !(collider.gameObject.GetComponent<playerProgress>().getHolding()))
+        if (collider != null)
         {
-            collider.SendMessage("collectCans");
+            Destroy(collider.gameObject);
         }
-
     }
 
     private void OnDrawGizmos()

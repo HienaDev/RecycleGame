@@ -19,33 +19,6 @@ public class playerProgress : MonoBehaviour
         }
     }
 
-    public void collectBoards()
-    {
-        if (isHolding == false)
-        {
-            isHolding = true;
-            GameManager.SendMessage("collectBoards");
-        }
-    }
-
-    public void collectPaper()
-    {
-        if (isHolding == false)
-        {
-            isHolding = true;
-            GameManager.SendMessage("collectPaper");
-        }
-    }
-
-    public void collectBottle()
-    {
-        if (isHolding == false)
-        {
-            isHolding = true;
-            GameManager.SendMessage("collectBottle");
-        }
-    }
-
     public void stopHolding()
     {
         isHolding = false;
