@@ -4005,7 +4005,7 @@ MonoBehaviour:
   - {fileID: 5090591318153199731, guid: fe57370de80119f438bf3ad1d10f6d62, type: 3}
   - {fileID: 5090591318153199731, guid: 374d2e2d8c4febc4ba88328cdb845bd9, type: 3}
   - {fileID: 5090591318153199731, guid: 25f2c85c00222af489c095f3662e1ca3, type: 3}
-  spawnTimer: 0
+  spawnTimer: 3
 --- !u!4 &400336912
 Transform:
   m_ObjectHideFlags: 0
@@ -4459,7 +4459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
+  m_AnchoredPosition: {x: 0, y: 65.34}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640803328
@@ -4484,7 +4484,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -6094,8 +6094,8 @@ Canvas:
   m_GameObject: {fileID: 1260601734}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

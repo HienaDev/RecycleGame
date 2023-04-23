@@ -18,22 +18,23 @@ public class collectables : MonoBehaviour
 
     private float timeSinceLastSpawn;
 
-    [SerializeField] private float spawnTimer = 5f;
+    [SerializeField] private float spawnTimer;
 
     private GameController gameController;
     //public static collectables Instance;
     private void Awake()
     {
-        timeSinceLastSpawn = 3f;
+        timeSinceLastSpawn = spawnTimer;
         gameController = GetComponent<GameController>();
     }
 
     private void Update()
     {
         timeSinceLastSpawn -= Time.deltaTime;
-        if (timeSinceLastSpawn < spawnTimer)
+        Debug.Log(timeSinceLastSpawn);
+        if (timeSinceLastSpawn < 0)
         {
-            timeSinceLastSpawn = 3f;
+            timeSinceLastSpawn = spawnTimer;
             SpawnTrash();
         }
     }
