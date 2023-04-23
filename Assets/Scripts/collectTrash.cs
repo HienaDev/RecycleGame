@@ -56,8 +56,8 @@ public class collectTrash : MonoBehaviour
 
             isHeld = false;
 
-            audioS = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<AudioSource>();
-            audioS.PlayOneShot(audioS.clip);
+            //audioS = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<AudioSource>();
+            //audioS.PlayOneShot(audioS.clip);
 
             if (transform.rotation == Quaternion.Euler(0f, 180f, 0f))
             {
