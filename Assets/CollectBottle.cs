@@ -24,7 +24,7 @@ public class CollectBottle : MonoBehaviour
     {
         Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, bottleCheckRadius, playerMask);
 
-        if (collider != null && collider.gameObject.GetComponent<playerProgress>().getHolding())
+        if (collider != null && !(collider.gameObject.GetComponent<playerProgress>().getHolding()))
         {
             collider.SendMessage("collectBottle");
         }

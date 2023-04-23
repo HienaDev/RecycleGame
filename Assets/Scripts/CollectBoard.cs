@@ -26,7 +26,7 @@ public class CollectBoard : MonoBehaviour
     {
         Collider2D collider = Physics2D.OverlapCircle(gameObject.transform.position, boardCheckRadius, playerMask);
 
-        if (collider != null && collider.gameObject.GetComponent<playerProgress>().getHolding())
+        if (collider != null && !(collider.gameObject.GetComponent<playerProgress>().getHolding()))
         {
             collider.SendMessage("collectBoards");
 
