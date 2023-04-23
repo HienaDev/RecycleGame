@@ -8,17 +8,13 @@ public class trashCanDetector : MonoBehaviour
 
     [SerializeField] private float canCheckRadius = 2f;
 
-
+    private GameController gameController;
 
     // Update is called once per frame
     private void Update()
     {
-
-
-
         DetectCollision();
-
-
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
 
@@ -29,6 +25,8 @@ public class trashCanDetector : MonoBehaviour
 
         if (collider != null)
         {
+            gameController.ScoreIncrease();
+            gameController.reduceIdleStrash();
             Destroy(collider.gameObject);
         }
     }

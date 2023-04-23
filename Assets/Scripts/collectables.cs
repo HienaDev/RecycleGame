@@ -20,13 +20,12 @@ public class collectables : MonoBehaviour
 
     [SerializeField] private float spawnTimer = 5f;
 
-
+    private GameController gameController;
     //public static collectables Instance;
-
-
     private void Awake()
     {
         timeSinceLastSpawn = 3f;
+        gameController = GetComponent<GameController>();
     }
 
     private void Update()
@@ -41,9 +40,10 @@ public class collectables : MonoBehaviour
 
     private void SpawnTrash()
     {
+        gameController.increaseIdleStrash();
         Vector3 tempPos = new Vector3(Random.Range(-170f, 170f), Random.Range(-100f, 120f), 0f);
         GameObject can = Instantiate(trashList[Random.Range(0, trashList.Length)], gameObject.transform); //-7 - -18 -55 - -66 41 - 30
-
+        
         if ((tempPos.y >= -20 && tempPos.y <= -4) || (tempPos.y >= -70 && tempPos.y <= -50) || (tempPos.y >= 26 && tempPos.y <= 47))
         {
             tempPos.y += 20;
