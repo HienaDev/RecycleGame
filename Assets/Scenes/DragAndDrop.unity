@@ -817,15 +817,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfdbad3ff0178e43af61be0cfc93066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  B_Trash_1: {fileID: 5090591318153199731, guid: b484acbd6e326bc4386934b3e38961d8, type: 3}
-  B_Trash_2: {fileID: 5090591318153199731, guid: bee381feffac7ab4f87633695c4cdb85, type: 3}
-  B_Trash_3: {fileID: 5090591318153199731, guid: 80d30cb033cd2344391ce21c014a7422, type: 3}
-  B_Trash_4: {fileID: 5090591318153199731, guid: e23e19e1c34d5764c97671fcc04b9f48, type: 3}
-  G_Trash_1: {fileID: 5090591318153199731, guid: f9c412ca6a3125f49a529271898533c6, type: 3}
-  G_Trash_2: {fileID: 5090591318153199731, guid: 2bcf36072cc69324bb5be0c6f95be6c4, type: 3}
-  G_Trash_3: {fileID: 5090591318153199731, guid: f35bf428ff9d12d4faf9301cd547cdcf, type: 3}
-  Y_Trash_1: {fileID: 5090591318153199731, guid: 9860c179a270f1740af240ecf6a2ed57, type: 3}
-  Y_Trash_2: {fileID: 5090591318153199731, guid: 6fe4e006362ab3540adf288abc59425b, type: 3}
+  trashObjects:
+  - {fileID: 5090591318153199731, guid: b484acbd6e326bc4386934b3e38961d8, type: 3}
+  - {fileID: 5090591318153199731, guid: bee381feffac7ab4f87633695c4cdb85, type: 3}
+  - {fileID: 5090591318153199731, guid: 80d30cb033cd2344391ce21c014a7422, type: 3}
+  - {fileID: 5090591318153199731, guid: e23e19e1c34d5764c97671fcc04b9f48, type: 3}
+  - {fileID: 5090591318153199731, guid: f9c412ca6a3125f49a529271898533c6, type: 3}
+  - {fileID: 5090591318153199731, guid: 2bcf36072cc69324bb5be0c6f95be6c4, type: 3}
+  - {fileID: 5090591318153199731, guid: f35bf428ff9d12d4faf9301cd547cdcf, type: 3}
+  - {fileID: 5090591318153199731, guid: 9860c179a270f1740af240ecf6a2ed57, type: 3}
+  - {fileID: 5090591318153199731, guid: 6fe4e006362ab3540adf288abc59425b, type: 3}
 --- !u!1001 &1685304516190830599
 PrefabInstance:
   m_ObjectHideFlags: 0
